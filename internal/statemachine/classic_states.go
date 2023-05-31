@@ -949,7 +949,7 @@ func (stateMachine *StateMachine) customizeFstab() error {
 		)
 		fstabEntries = append(fstabEntries, fstabEntry)
 	}
-	fstabIO.Write([]byte(strings.Join(fstabEntries, "\n")))
+	fstabIO.Write([]byte(strings.Join(fstabEntries, "\n") + "\n"))
 	return nil
 }
 
